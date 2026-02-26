@@ -1,13 +1,18 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import AddTodo from "./componetes/AddTodo";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TodoList from "./componetes/todoList";
 
 function App() {
   return (
     <>
       <ToastContainer position="bottom-center"></ToastContainer>
-      <AddTodo></AddTodo>
+      {/* <AddTodo></AddTodo> */}
+      <div className="bg-gray-500 h-screen pt-15 ">
+        <TodoList></TodoList>
+      </div>
     </>
   );
 }
