@@ -10,7 +10,7 @@ function App() {
     <>
       <ToastContainer position="bottom-center"></ToastContainer>
       {/* <AddTodo></AddTodo> */}
-      <div className="bg-gray-500 h-screen pt-15 ">
+      <div className="bg-gray-500 full-screen p-15 ">
         <TodoList></TodoList>
       </div>
     </>
