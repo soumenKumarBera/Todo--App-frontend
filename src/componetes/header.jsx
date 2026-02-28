@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
-    <div className="bg-gray-700">
+    <div className="bg-gray-700  ">
       <div class="container ">
         {" "}
         <header class="d-flex justify-content-center py-3">
@@ -8,19 +10,19 @@ const Header = () => {
           <ul class="nav nav-pills">
             {" "}
             <li class=" ">
-              <a href="#" class="nav-link   " aria-current="page">
+              <Link to="/" class="nav-link   " aria-current="page">
                 <div className="header-btn">AddTodo</div>
-              </a>
+              </Link>
             </li>{" "}
             <li class="nav-item ">
-              <a href="#" class="nav-link">
+              <Link to="todo-list" class="nav-link">
                 <div className="header-btn"> All-Todo-List</div>
-              </a>
+              </Link>
             </li>{" "}
             <li class="nav-item font-bold">
-              <a href="#" class="nav-link">
+              <Link to="all-delete" class="nav-link">
                 <div className="header-btn"> All-Delete</div>
-              </a>
+              </Link>
             </li>{" "}
           </ul>{" "}
         </header>{" "}

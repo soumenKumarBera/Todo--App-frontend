@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { IoIosAddCircle } from "react-icons/io";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AddTodo = () => {
   const todoNmaeElement = useRef();
   const todoDateElement = useRef();
+  const navigetion = useNavigate();
 
   const handelOnSubmit = async (event) => {
     event.preventDefault();
@@ -22,6 +24,8 @@ const AddTodo = () => {
       .post("http://localhost:8080/api/addFoodItem", objList)
       .then((res) => {
         console.log(res);
+        navigetion("/todo-list");
+
         toast.success("added succesfully...!");
       })
       .catch((error) => {
@@ -31,7 +35,7 @@ const AddTodo = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-stone-500">
+    <div className="flex items-center justify-center ">
       <div className="w-auto h-auto  rounded-xl flex items-center justify-center bg-purple-400 ">
         <form className="p-5" onSubmit={handelOnSubmit}>
           <input
