@@ -14,13 +14,18 @@ const TodoList = () => {
     });
   }, []);
 
+  const handelOnClick = (id) => {
+    axios
+      .delete(`http://localhost:8080/api/deleteFoodItem/${id}`)
+      .then((res) => console.log(res.data));
+  };
+
   return (
     <>
       {" "}
       {userData == 0 && <EmptyMsg></EmptyMsg>}
-      
       {userData.map((post) => (
-        <List post={post}></List>
+        <List post={post} key={post.id} handelDelete={handelOnClick}></List>
       ))}
     </>
   );

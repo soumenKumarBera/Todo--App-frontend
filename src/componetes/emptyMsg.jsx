@@ -1,6 +1,6 @@
 const EmptyMsg = () => {
   return (
-    <center className="bg-gray-500 h-screen">
+    <center className="">
       <h1>Item list empty......</h1>
     </center>
   );

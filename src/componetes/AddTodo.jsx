@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const AddTodo = () => {
   const todoNmaeElement = useRef();
   const todoDateElement = useRef();
-  const navigetion = useNavigate();
+  const navigate = useNavigate();
 
   const handelOnSubmit = async (event) => {
     event.preventDefault();
@@ -24,7 +24,7 @@ const AddTodo = () => {
       .post("http://localhost:8080/api/addFoodItem", objList)
       .then((res) => {
         console.log(res);
-        navigetion("/todo-list");
+        navigate("/todo-list");
 
         toast.success("added succesfully...!");
       })
