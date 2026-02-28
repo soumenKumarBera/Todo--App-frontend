@@ -11,10 +11,10 @@ function App() {
     <>
       <Header></Header>
        <ToastContainer position="bottom-center"></ToastContainer>
-      <AddTodo></AddTodo>
-      {/* <div className="bg-gray-500 full-screen p-15 ">
+      {/* <AddTodo></AddTodo> */}
+      <div className="bg-gray-500 full-screen p-15 ">
         <TodoList></TodoList>
-      </div>  */}
+      </div> 
     </>
   );
 }

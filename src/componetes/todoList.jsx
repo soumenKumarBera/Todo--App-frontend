@@ -2,6 +2,7 @@ import axios from "axios";
 import List from "./list";
 import { useEffect, useState } from "react";
 import DeleteAll from "./deleteAll";
+import EmptyMsg from "./emptyMsg";
 
 const TodoList = () => {
   const [userData, setUserData] = useState([]);
@@ -15,7 +16,9 @@ const TodoList = () => {
 
   return (
     <>
-      <DeleteAll></DeleteAll>
+      {" "}
+      {userData == 0 && <EmptyMsg></EmptyMsg>}
+      
       {userData.map((post) => (
         <List post={post}></List>
       ))}
